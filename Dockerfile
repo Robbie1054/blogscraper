@@ -13,8 +13,8 @@ WORKDIR /app
 # Copy the requirements file
 COPY requirements.txt .
 
-# Install Python dependencies
-RUN pip3 install --no-cache-dir -r requirements.txt
+# Install Python dependencies with verbose output
+RUN pip3 install --no-cache-dir -r requirements.txt -v
 
 # Copy the rest of the application code
 COPY . .
